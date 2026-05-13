@@ -1,0 +1,516 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header .container nav {
+    position: relative;
+}
+
+header .container nav ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    background-color: #eee;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    right: 0%;
+    top: 110%;
+    min-width: 200px;
+    padding: 2px;
+    margin: 0;
+    display: none;
+}
+
+header .container nav ul li {
+    width: 100%;
+    padding: 15px;
+}
+
+header .container nav ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+header .container nav ul li:last-child {
+    border-bottom: none
+}
+
+header .container nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+
+}
+
+header .container nav ul li a:hover {
+    margin-left: 15px;
+}
+
+header .container .logo img {
+    width: 60px;
+}
+
+header nav .span {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    justify-content: flex-end;
+
+}
+
+header nav span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-top: 3px;
+    transition: all 0.5s;
+}
+
+header nav .span :nth-child(2) {
+    width: 60%;
+}
+
+header nav .span :nth-child(3) {
+    width: 60%;
+}
+
+header nav:hover .span :nth-child(2) {
+    width: 100%;
+
+}
+
+header nav:hover .span :nth-child(3) {
+    width: 100%;
+
+}
+
+header nav:hover ul {
+    display: block;
+
+}
+
+main .landing {
+    background-image: url(../imgs/landing.jpg);
+    background-size: cover;
+    height: calc(100vh - 57.9px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+main .landing .intro-text h1 {
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: 900;
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+}
+
+main .landing .intro-text p {
+    width: 320px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+main .features {
+    background-color: var(--section-background);
+}
+
+main .features .container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+
+
+}
+
+main .features .feat {
+    padding: 20px;
+    text-align: center;
+    line-height: 30px;
+
+}
+
+main .features .feat p {
+    padding-top: 10px;
+    color: #777;
+}
+
+main .features .feat i {
+    color: var(--main-color);
+    padding-bottom: 20px;
+}
+
+main .features .c2 {
+    box-shadow: 0 0 10px black outset;
+}
+
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+main .Services .Container {
+    padding: 20px;
+}
+
+#s1 {
+    text-align: center;
+    margin-top: -30px;
+    font-size: 20px;
+    color: #797979;
+
+}
+
+
+main .Services .container .serv {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+main .Services .container .serv .col {
+    margin-right: 30px;
+}
+
+main .Services .container .serv .col .serv-card {
+    padding: 40px;
+}
+
+main .Services .container .serv .col .serv-card i {
+    color: var(--main-color);
+}
+
+main .Services .container .serv .col .serv-card .si {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main .Services .container .serv .col .serv-card p {
+    line-height: 30px;
+    color: #797979;
+}
+
+main .Services .container .serv .col .serv-card .si i {
+    transform: translateX(-50px);
+    align-self: normal;
+}
+
+main .Services .container .serv .col .serv-card .si h2 {
+    transform: translateX(-35px);
+    padding-bottom: 20px;
+}
+
+main .Services .container .serv .col .serv-imge {
+    width: 300px;
+    padding: 40px 20px;
+    padding-top: 80px;
+    position: relative;
+    margin-top: 30px;
+
+}
+
+@media(max-width : 776px) {
+    main .Services .container .serv .col .serv-card .si {
+        display: block;
+    }
+
+    main .Services .container .serv .col .serv-card .si i {
+        transform: none;
+        padding-bottom: 15px;
+    }
+
+    main .Services .container .serv .col .serv-card .si h2 {
+        transform: none;
+        padding-bottom: 15px;
+    }
+
+    main .Services .container .serv .col .serv-card {
+        text-align: center;
+    }
+
+    main .Services .container .serv .col .serv-imge {
+        display: none;
+    }
+
+    main .features .feat i {
+        padding-bottom: 20px;
+    }
+}
+
+
+main .Services .container .serv .col .serv-imge img {
+    width: 260px;
+
+}
+
+main .Services .container .serv .col .serv-imge::after {
+    content: "";
+    height: 400px;
+    width: 75px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    right: -10px;
+    z-index: -1;
+    transform: translateY(-30px);
+}
+
+.m1 {
+    margin-top: 30px;
+}
+
+main .Portfolio {
+    background-color: var(--section-background);
+}
+
+main .Portfolio .container .Portfolio-cards {
+    padding: 30px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+
+}
+
+main .Portfolio .Portfolio-cards .port-card {
+    background-color: #eee;
+    border-radius: 30px;
+}
+
+main .Portfolio .Portfolio-cards .port-card .card-text {
+    padding: 20px;
+    text-align: center;
+}
+
+main .Portfolio .Portfolio-cards .port-card .card-text h3 {
+    padding-bottom: 20px;
+}
+
+main .Portfolio .Portfolio-cards .port-card img {
+    border-radius: 20px;
+    max-width: 100%;
+
+}
+
+main .Portfolio .Portfolio-cards .port-card .card-text h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+main .Portfolio .Portfolio-cards .port-card .card-text p {
+    color: #777;
+    line-height: 2rem;
+}
+
+main .Contact .container .contact-text {
+    text-align: center;
+    padding: 20px;
+}
+
+main .Contact .container .contact-text .con1 {
+    color: var(--secondary-color);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+main .Contact .container .contact-text a {
+    text-decoration: none;
+    font-size: 40px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+main .Contact .container .contact-text .con2 {
+    padding-top: 10px;
+    font-weight: 500;
+    font-family: "Saira Stencil", sans-serif;
+    font-size: 18px;
+}
+
+main .Contact .container .contact-text .con2 i {
+    margin-left: 5px;
+}
+
+@media(max-width:992px) {
+    .serv .serv-imge {
+        display: none;
+    }
+
+}
+
+footer {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #eee;
+    padding: 20px;
+    font-family: "Pacifico", cursive;
+
+}
+
+footer span {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer :first-child {
+    font-size: 20px;
+    color: #eee;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    main .ftr {
+        flex-wrap: wrap;
+    }
+
+    main .Services .Container .serv {
+        padding-left: 70px;
+    }
+
+    main .Services .Container .serv .col .serv-imge {
+        display: none;
+    }
+
+    .special-heading {
+        font-size: 70px;
+
+    }
+
+    #s1 {
+        margin-top: -25px;
+    }
+
+    main .Contact .container .contact-text a {
+        font-size: 30px;
+    }
+
+    .con1 {
+        font-size: 25px;
+    }
+
+    .contact-text a {
+        font-size: 25px;
+    }
+}
+
+/* small */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    main .ftr {
+        flex-wrap: wrap;
+    }
+
+    main .Services .Container .serv .col .serv-imge {
+        display: none;
+    }
+
+}
+
+/* medium */
+
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    main .ftr {
+        flex-basis: 100px;
+        flex-wrap: nowrap;
+        padding: 40px 100px;
+        gap: 100px;
+    }
+
+    main .Services .Container {
+        width: 90%;
+    }
+
+    main .Portfolio .Container {
+        width: 90%;
+    }
+
+    main .Services .Container .serv .col .serv-imge {
+        display: none;
+    }
+
+
+}
+
+/* large */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+
+    }
+
+    main .Services .Container .serv .col .serv-imge {
+        display: block;
+    }
+
+    main .Services .Container {
+        width: 90%;
+    }
+
+    main .Portfolio .Container {
+        width: 90%;
+    }
+}
